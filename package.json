@@ -1,0 +1,35 @@
+{
+  "name": "tencent-nlp",
+  "version": "0.0.1",
+  "description": "Tentent NLP Segmentation.",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NodeBB-China/tencent-nlp.git"
+  },
+  "keywords": [
+    "NLP",
+    "Chinese",
+    "Segmentation",
+    "中文分词",
+    "Segmentation"
+  ],
+  "author": {
+      "name": "A632079",
+      "email": "a632079@gmail.com"
+    },
+   "contributors": [
+    {
+      "name": "A632079",
+      "email": "a632079@gmail.com",
+      "url": "https://github.com/NodeBB-China/tencent-nlp"
+    }
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NodeBB-China/tencent-nlp/issues"
+  },
+  "homepage": "https://github.com/NodeBB-China/tencent-nlp#readme"
+}
