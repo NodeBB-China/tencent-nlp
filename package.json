@@ -1,6 +1,6 @@
 {
   "name": "tencent-nlp",
-  "version": "0.0.1",
+  "version": "0.1.0.",
   "description": "Tentent NLP Segmentation.",
   "main": "app.js",
   "scripts": {
