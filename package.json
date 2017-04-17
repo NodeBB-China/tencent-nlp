@@ -27,9 +27,13 @@
       "email": "a632079@gmail.com",
       "url": "https://github.com/NodeBB-China/tencent-nlp"
     }
-  "license": "ISC",
+   ],
+  "license" : "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/NodeBB-China/tencent-nlp/issues"
+  },
+  "dependencies": {
+    "qcloudapi-sdk":"0.1.5 "
   },
   "homepage": "https://github.com/NodeBB-China/tencent-nlp#readme"
 }
