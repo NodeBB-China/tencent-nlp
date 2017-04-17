@@ -12,38 +12,42 @@ nlp.configure = (settings) => {
     })
     config = settings;
 }
-nlp.cut = (text) => {
+nlp.cut = (text,callback) => {
+    let req;
     capi.request({
-        Region: 'gz',
+        Region: config.Region,
         Action: 'LexicalAnalysis',
-        Code : 2097152,
-        Text : text
+        code : 2097152,
+        text : text
     }, function(error, data) {
         if(error){
             console.log("[tencent-nlp]Catch a error:");
             console.log(error);
         }
-        data = JSON.parse(data);
+        //data = JSON.parse(data);
         if(data.code !== 0){
             return false;
         }
-        console.log(data);
-        return data;
+        //console.log(data);
+	callback(null,data);
     })
+	//console.log(`req is ${req}`);
 }
-nlp.seg = (text) => {
+nlp.seg = (text,callback) => {
     //分词返回口，返回结构:["我","爱","你"]
+    let req;
     capi.request({
-        Region: setting.Region,
+        Region: config.Region,
         Action: 'LexicalAnalysis',
-        Code : 2097152,
-        Text : text
+        code : 2097152,
+        text : text
     }, function(error, data) {
+	//console.log(data);
         if(error){
             console.log("[tencent-nlp]Catch a error:");
             console.log(error);
         }
-        data = JSON.parse(data);
+        //data = JSON.parse(data);
         if(data.code !== 0){
             return false;
         }
@@ -52,11 +56,12 @@ nlp.seg = (text) => {
         for(let i = 0;i < length; i++){
             seg[i] = data.tokens[i].word;
         }
+        //console.log(`seg is ${seg}`);
         if(seg.length == 0){
-            return false;
+            callback(null,false);
         }else{
-            return seg;
-        }
+            callback(null,seg);
+        }        
     })
 }
 
